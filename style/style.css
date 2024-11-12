@@ -1,0 +1,188 @@
+/*= GLOBAL =========================================================================================*/
+/*- GLOBAL -----------------------------------------------------------------------------------------*/
+/*- GLOBAL -----------------------------------------------------------------------------------------*/
+
+html, body {
+  font-family: Cormorant, openSans, sans-serif;
+  color: #424551;
+  line-height: 160%;
+}
+
+.wrapper {
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.container {
+  padding: 0 165px;
+  height: 100%;
+  width: 100%;
+}
+
+.main_about {
+  padding: 180px 0 160px;
+}
+
+.logo {
+}
+
+
+
+/*= HEADER ======================================================================================*/
+/*= HEADER ======================================================================================*/
+/*= HEADER ======================================================================================*/
+
+
+
+.header {
+  font-weight: 700;
+  background: linear-gradient(0deg, rgba(29, 47, 48, 0.70) 0%, rgba(29, 47, 48, 0.70) 100%), 
+      url(/images/mainPage/mainBg.png) lightgray 0px -246.898px / 100% 232.727% no-repeat;
+  width: 100%; /* Ширина 100% для адаптивности */
+  max-width: 1920px; /* Максимальная ширина */
+  height: 550px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto; /* Центрирование */
+}
+
+
+
+/*- HEADER-TOP ----------------------------------------------------------------------------------*/
+/*- HEADER-TOP ----------------------------------------------------------------------------------*/
+/*- HEADER-TOP ----------------------------------------------------------------------------------*/
+
+.header_top{
+  height: 60px;
+  width: 100%;
+  background: rgba(29, 47, 48, 0.30);
+  backdrop-filter: blur(3.5px);
+}
+
+.header_top-inner {
+  width: 100%;
+  padding: 10px 0px;
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  margin-right: 125px;
+  width: 65px;
+  height: 20px;
+}
+
+.header-navigation {
+  margin-right: auto;
+}
+
+.header-nav-list {
+  display: flex;
+  white-space: nowrap;
+  margin-right: 270.17px;
+}
+
+.header-nav-item {
+  margin-right: 40px;
+}
+
+.header-nav-item :last-child{
+  margin-right: 0;
+}
+
+.header-nav-link {
+  color: #FFF;
+font-family: "Open Sans";
+font-size: 16px;
+font-weight: 400;
+}
+
+.search-sighn_in {
+display: flex;
+}
+
+.header-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search{
+  width: 32px;
+  height: 38px;
+  margin-right: 60px;
+}
+
+.sighn_in{
+  width: 27px;
+
+}
+
+/*- HEADER-BODY ---------------------------------------------------------------------------------*/
+/*- HEADER-BODY ---------------------------------------------------------------------------------*/
+
+.header_body {
+  flex-grow: 1;
+}
+
+.header_body-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/*= MAIN ======================================================================================*/
+/*- MAIN --------------------------------------------------------------------------------------*/
+/*- MAIN --------------------------------------------------------------------------------------*/
+
+
+
+/*= FOOTER ======================================================================================*/
+/*- FOOTER --------------------------------------------------------------------------------------*/
+/*- FOOTER --------------------------------------------------------------------------------------*/
+
+
+
+.footer {
+  color: #fff;
+}
+
+
+/*= FOOTER TOP ======================================================================================*/
+/*- FOOTER TOP --------------------------------------------------------------------------------------*/
+/*- FOOTER TOP --------------------------------------------------------------------------------------*/
+
+
+
+.footer_top {
+  background-color: var(--gray-900, #1E212C);
+  padding: 80px 0 60px;
+}
+
+.footer_top-inner {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 -15px;
+  width: 100%;
+}
+
+
+/*= FOOTER BOTTOM ======================================================================================*/
+/*- FOOTER BOTTOM --------------------------------------------------------------------------------------*/
+/*- FOOTER BOTTOM --------------------------------------------------------------------------------------*/
+
+
+
+
+.footer_bottom {
+  background-color: #292C37;
+}
+
+.footer_bottom-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
