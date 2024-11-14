@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "Cormorant";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("Cormorant"),
+    url("../fonts/Cormorant/Cormorant-VariableFont_wght.woff2") format("woff2"),
+    url("../fonts/Cormorant/Cormorant-VariableFont_wght.woff") format("woff"),
+    url("../fonts/Cormorant/Cormorant-VariableFont_wght.eot") format("eot");
+}
+
+@font-face {
+  font-family: "Cormorant";
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+  src:
+    local("Cormorant"),
+    url("../fonts/Cormorant/Cormorant-Italic-VariableFont_wght.woff2") format("woff2"),
+    url("../fonts/Cormorant/Cormorant-Italic-VariableFont_wght.woff") format("woff"),
+    url("../fonts/Cormorant/Cormorant-Italic-VariableFont_wght.eot") format("eot");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("Open Sans"),
+    url("../fonts/openSans/OpenSans-VariableFont_wdth,wght.woff2") format("woff2"),
+    url("../fonts/openSans/OpenSans-VariableFont_wdth,wght.woff") format("woff"),
+    url("../fonts/openSans/OpenSans-VariableFont_wdth,wght.eot") format("eot");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("Open Sans"),
+    url("../fonts/openSans/OpenSans-VariableFont_wdth,wght.woff2") format("woff2"),
+    url("../fonts/openSans/OpenSans-VariableFont_wdth,wght.woff") format("woff"),
+    url("../fonts/openSans/OpenSans-VariableFont_wdth,wght.eot") format("eot");
+}
