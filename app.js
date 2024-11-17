@@ -4,6 +4,7 @@ $(document).ready(function(){
     dots: false, // Показывать точки для навигации
     draggable: false,
     waitForAnimate: false,
+    variableWidth: true, // Разрешение на использование ширины, заданной в стилях
     infinite: true, // Бесконечная прокрутка
     speed: 500, // Скорость перехода в мс
     slidesToShow: 4, // Количество видимых слайдов
