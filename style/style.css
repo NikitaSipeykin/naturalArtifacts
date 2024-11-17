@@ -46,6 +46,8 @@ html, body {
   line-height: normal;
 }
 
+
+
 /*= HEADER ======================================================================================*/
 /*= HEADER ======================================================================================*/
 /*= HEADER ======================================================================================*/
@@ -185,13 +187,10 @@ html, body {
 }
 
 .header-btn-box {
-  width: 109px;
+  display: flex;
   height: 23px;
   margin-top: 21.94px;
   margin-bottom: 114px;
-}
-
-.header-btn-link {
   color: #BAE249;
   font-family: "Open Sans";
   font-size: 16px;
@@ -199,6 +198,19 @@ html, body {
   font-weight: 700;
   line-height: normal;
 }
+
+.header-btn-box::after {
+  content: "";
+  display: block;
+  width: 43px;
+  height: 24px;
+  background: url(/images/icons/arrows/LongArrowRight.svg) 0 2px / 100% no-repeat;
+  margin-left: 8px;
+  margin-top: 2px;
+}
+
+
+
 
 /*= MAIN-SLIDER ======================================================================================*/
 /*- MAIN-SLIDER --------------------------------------------------------------------------------------*/
@@ -478,6 +490,17 @@ html, body {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  display: flex;
+}
+
+.artefacts-description-btm-link::after {
+  content: "";
+  display: block;
+  width: 43px;
+  height: 24px;
+  background: url(/images/icons/arrows/LongArrowRightBlack.svg) 0 2px / 100% no-repeat;
+  margin-left: 8px;
+  margin-top: 2px;
 }
 
 
