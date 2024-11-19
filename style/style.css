@@ -309,19 +309,31 @@ cursor: pointer;
   margin-top: 16px;
   width: 145px;
   height: 45px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
   border: 1px solid #BAE249;
-  margin-top: 16px;
+  transition: background-color 0.3s ease; /* Плавное изменение фона */
+  display: flex; /* Чтобы элемент был флекс-контейнером */
+}
+
+.example-button-box:hover {
+  cursor: pointer;
+  background-color: #BAE249; /* Фон меняется при наведении */
 }
 
 .example-button {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #BAE249;
   font-family: "Open Sans";
   font-size: 16px;
   font-weight: 400;
+  transition: color 0.3s ease; /* Плавное изменение цвета текста */
+}
+
+.example-button-box:hover .example-button {
+  color: #0B1919; /* Цвет текста меняется при наведении */
 }
 
 .example-slider-arrows {
@@ -332,8 +344,41 @@ cursor: pointer;
 }
 
 .example-slider-arrow {
+  width: 35px;
+  height: 35px;
   display: flex;
+  justify-content: center;
   align-items: center;
+  transition: transform 0.3s ease, fill 0.3s ease; /* Плавное увеличение и изменение цвета */
+}
+
+.example-slider-arrow:hover {
+  transform: scale(1.2); /* Увеличение стрелки */
+}
+
+.example-slider-arrow[disabled] {
+  pointer-events: none; /* Отключение всех событий */
+  cursor: not-allowed; /* Указатель "запрещено" */
+  opacity: 0.5; /* Прозрачность для визуального отличия */
+  transform: none; /* Убираем эффект увеличения */
+}
+
+/* Убираем эффект hover для disabled */
+.example-slider-arrow[disabled]:hover svg path {
+  fill: #899D9D; /* Цвет остается прежним */
+  transform: none; /* Без увеличения */
+}
+
+.example-slider-arrow svg path {
+  transition: fill 0.3s ease; /* Плавное изменение цвета */
+}
+
+.example-slider-arrow:hover svg path {
+  fill: #BAE249; /* Новый цвет стрелки при наведении */
+}
+
+.example-slider-arrow:disabled svg path {
+  fill: #899D9D; /* Новый цвет стрелки при наведении */
 }
 
 .example-slider-prew {
@@ -361,8 +406,6 @@ cursor: pointer;
 
 
 
-
-.artefacts-inner {}
 
 .artefacts-title-box {
   margin-bottom: 33px;
@@ -512,9 +555,9 @@ cursor: pointer;
   /* 24px */
 }
 
-.artefacts-description-btn-box {}
-
-.btn-arrow {}
+.artefacts-description-btn-box {
+  width: 176px;
+}
 
 .artefacts-description-btm-link {
   color: #0B1919;
@@ -524,16 +567,33 @@ cursor: pointer;
   font-weight: 700;
   line-height: normal;
   display: flex;
+  transition: color 0.3s ease; /* Плавное изменение цвета текста */
 }
 
-.artefacts-description-btm-link::after {
+.artefacts-description-btm-link svg{
   content: "";
   display: block;
   width: 43px;
   height: 24px;
-  background: url(/images/icons/arrows/LongArrowRightBlack.svg) 0 2px / 100% no-repeat;
   margin-left: 8px;
-  margin-top: 2px;
+  transition: color 0.3s ease; /* Плавное изменение цвета текста */
+}
+
+.artefacts-description-btn-box :hover{
+  color:  #688B05;
+  cursor: pointer;
+}
+
+.artefacts-description-btn-box :active{
+  color:  #899D9D;
+}
+
+.artefacts-description-btn-box :hover svg path{
+  fill:  #688B05;
+}
+
+.artefacts-description-btn-box :active svg path{
+  fill:  #899D9D;
 }
 
 
