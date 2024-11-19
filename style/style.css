@@ -21,15 +21,9 @@ html, body {
   width: 1107px;
 }
 
-.main {}
-
 .main-example {
   padding: 63px 0 49px;
 }
-
-.main-artefacts {}
-
-.logo {}
 
 .circle_number {
   width: 24px;
@@ -45,6 +39,8 @@ html, body {
   font-weight: 700;
   line-height: normal;
 }
+
+
 
 /*= HEADER ======================================================================================*/
 /*= HEADER ======================================================================================*/
@@ -112,21 +108,45 @@ html, body {
   margin-right: 0;
 }
 
+.header-nav-link:hover {
+  color: #BAE249;
+}
+
+.header-nav-link:active {
+  color: #688B05;
+}
+
 .header-nav-link {
   color: #FFF;
   font-family: "Open Sans";
   font-size: 16px;
   font-weight: 400;
+  text-decoration: none; /* Убираем стандартное подчеркивание у ссылок */
+  transition: color 0.3s ease; /* Плавный переход цвета текста */
 }
 
 .search-sighn_in {
   display: flex;
 }
 
+.search-sighn_in .top-icon path {
+  stroke: #BAE249; /* Цвет по умолчанию */
+  transition: stroke 0.3s ease; /* Плавная анимация цвета */
+}
+
+
 .header-btn {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.header-btn :hover {
+cursor: pointer; 
+}
+
+.header-btn :hover path{
+  stroke: #91AC46;
 }
 
 .search {
@@ -185,20 +205,45 @@ html, body {
 }
 
 .header-btn-box {
-  width: 109px;
+  width: 160px;
+  display: flex;
   height: 23px;
   margin-top: 21.94px;
   margin-bottom: 114px;
-}
-
-.header-btn-link {
   color: #BAE249;
   font-family: "Open Sans";
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  transition: color 0.3s ease; /* Плавное изменение цвета текста */
 }
+
+.header-btn-box svg {
+  display: block;
+  margin-left: 8px;
+  margin-top: 4px;
+  transition: fill 0.3s ease; /* Плавное изменение заливки */
+}
+
+.header-btn-box:hover {
+  color: #91AC46; /* Цвет текста при наведении */
+  cursor: pointer;
+}
+
+.header-btn-box:active {
+  color: #688B05; /* Цвет текста при наведении */
+}
+
+.header-btn-box:hover svg path {
+  fill: #91AC46; /* Цвет заливки пути внутри SVG при наведении */
+}
+
+.header-btn-box:active svg path {
+  fill: #688B05; /* Цвет заливки пути внутри SVG при наведении */
+}
+
+
 
 /*= MAIN-SLIDER ======================================================================================*/
 /*- MAIN-SLIDER --------------------------------------------------------------------------------------*/
@@ -478,6 +523,17 @@ html, body {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  display: flex;
+}
+
+.artefacts-description-btm-link::after {
+  content: "";
+  display: block;
+  width: 43px;
+  height: 24px;
+  background: url(/images/icons/arrows/LongArrowRightBlack.svg) 0 2px / 100% no-repeat;
+  margin-left: 8px;
+  margin-top: 2px;
 }
 
 

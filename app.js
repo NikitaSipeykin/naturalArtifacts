@@ -32,3 +32,17 @@ $(document).ready(function(){
   let initialTotal = $('.example-slider').slick('getSlick').slideCount;
   $('.example-slider-counter').text('1 из ' + initialTotal);
 })
+
+document.querySelectorAll('.header-nav-link').forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault(); // Отключаем стандартное поведение
+    const targetId = this.getAttribute('href'); // Получаем ID раздела
+    const targetElement = document.querySelector(targetId);
+
+    // Прокрутка к элементу
+    window.scrollTo({
+      top: targetElement.offsetTop, // Позиция элемента от начала страницы
+      behavior: 'smooth' // Плавная прокрутка
+    });
+  });
+});
