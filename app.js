@@ -1,4 +1,6 @@
 $(document).ready(function(){
+  /* slick slider ======================================================================================================= */
+  
   // Инициализация слайдера
   $('.example-slider').slick({
     arrows: false, // Включаем стрелки
@@ -56,6 +58,7 @@ $(document).ready(function(){
   updateArrowState($('.example-slider').slick('getSlick')); // Изначально проверяем состояние стрелок
 });
 
+  /* smooth navigation movement ======================================================================================================= */
 
 document.querySelectorAll('.header-nav-link').forEach(link => {
   link.addEventListener('click', function (e) {
@@ -70,3 +73,50 @@ document.querySelectorAll('.header-nav-link').forEach(link => {
     });
   });
 });
+
+  /* correct variables checking ======================================================================================================= */
+
+document.querySelector('.form').addEventListener('submit', function (e) {
+  e.preventDefault(); // Останавливаем стандартное действие формы
+
+  // Получаем элементы ввода
+  const nameInput = document.getElementById('name');
+  const emailInput = document.getElementById('e-mail');
+
+  // Удаляем предыдущие ошибки
+  document.querySelectorAll('.error-message').forEach(el => el.remove());
+  nameInput.classList.remove('error');
+  emailInput.classList.remove('error');
+
+  // Флаг для проверки
+  let hasError = false;
+
+  // Проверка имени (минимум 2 символа)
+  if (nameInput.value.trim().length < 2) {
+    displayError(nameInput, 'Имя должно содержать минимум 2 символа.');
+    hasError = true;
+  }
+
+  // Проверка email
+  const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  if (!emailPattern.test(emailInput.value.trim())) {
+    displayError(emailInput, 'Недопустимый формат');
+    hasError = true;
+  }
+
+  // Если ошибок нет, отправляем форму
+  if (!hasError) {
+    alert('Форма отправлена!');
+    this.submit();
+  }
+});
+
+// Функция отображения ошибки
+function displayError(input, message) {
+  const errorMessage = document.createElement('div');
+  errorMessage.className = 'error-message';
+  errorMessage.textContent = message;
+
+  input.classList.add('error');
+  input.parentElement.appendChild(errorMessage);
+}
