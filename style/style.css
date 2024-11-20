@@ -116,6 +116,12 @@ html, body {
   color: #688B05;
 }
 
+.header-nav-link:focus {
+  outline: 1px solid #bae249;
+    outline-offset: 2px;
+}
+
+
 .header-nav-link {
   color: #FFF;
   font-family: "Open Sans";
@@ -141,12 +147,17 @@ html, body {
   justify-content: center;
 }
 
-.header-btn :hover {
+.header-btn:hover {
 cursor: pointer; 
 }
 
-.header-btn :hover path{
+.header-btn:hover path{
   stroke: #91AC46;
+}
+
+.top-icon:focus {
+  outline: 1px solid #bae249;
+  outline-offset: 2px;
 }
 
 .search {
@@ -243,6 +254,11 @@ cursor: pointer;
   fill: #688B05; /* Цвет заливки пути внутри SVG при наведении */
 }
 
+.header-btn-box:focus {
+  outline: 1px solid #bae249;
+  outline-offset: 2px;
+}
+
 
 
 /*= MAIN-SLIDER ======================================================================================*/
@@ -319,6 +335,11 @@ cursor: pointer;
   background-color: #BAE249; /* Фон меняется при наведении */
 }
 
+.example-button-box:focus {
+  outline: 1px solid #bae249;
+  outline-offset: 2px;
+}
+
 .example-button {
   width: 100%;
   height: 100%;
@@ -354,6 +375,11 @@ cursor: pointer;
 
 .example-slider-arrow:hover {
   transform: scale(1.2); /* Увеличение стрелки */
+}
+
+.example-slider-arrow:focus {
+  outline: 1px solid #bae249;
+  outline-offset: 2px;
 }
 
 .example-slider-arrow[disabled] {
@@ -596,6 +622,11 @@ cursor: pointer;
   fill:  #899D9D;
 }
 
+.artefacts-description-btn-box:focus {
+  outline: 1px solid #83A440;
+  outline-offset: 2px;
+}
+
 
 
 /*= FOOTER ======================================================================================*/
@@ -604,7 +635,6 @@ cursor: pointer;
 
 
 
-.footer {}
 
 
 /*= FOOTER TOP ======================================================================================*/
@@ -657,38 +687,79 @@ cursor: pointer;
   width: 350px;
 }
 
-#name {
-  display: flex;
-  width: 350px;
-  height: 45px;
-  padding-left: 16px;
-  align-items: center;
-  flex-shrink: 0;
-  margin-bottom: 24px;
-
-  color: #899D9D;
-  font-family: "Open Sans";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+.form input :hover{
+  color: #fff;
 }
 
-#e-mail {
+
+
+
+.form-label{
   display: flex;
   width: 350px;
   height: 45px;
-  padding-left: 16px;
   align-items: center;
   flex-shrink: 0;
   margin-bottom: 24px;
-
+  background-color: #fff;
   color: #899D9D;
+  position: relative;
+}
+
+.form-input {
+  width: 100%;
+  height: 100%;
   font-family: "Open Sans";
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
   line-height: normal;
+  padding-left: 16px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+
+.form-input::placeholder {
+  color: #899D9D;
+  transition: color 0.3s ease;
+}
+
+/* Изменение стиля при наведении */
+.form-input:hover {
+  background-color: #899D9D; /* Новый цвет фона */
+  color: #333; /* Цвет вводимого текста */
+}
+
+.form-input:hover::placeholder {
+  color: #fff; /* Цвет заполнителя */
+}
+
+/* При фокусе */
+.form-input:focus {
+  outline: 1px solid #83A440;
+  outline-offset: 2px; /* Цвет рамки при фокусе */
+}
+
+/* Ошибочный ввод */
+.form-input.error {
+  border-color: red;
+}
+
+/* Ошибочное сообщение */
+.error-message {
+  position: absolute;
+  top: -24px; /* Располагаем над блоком */
+  left: 0;
+  color: red;
+  font-family: "Open Sans";
+  font-size: 12px;
+  margin-left: 16px;
+  padding: 0;
+  white-space: nowrap; /* Предотвращаем перенос текста */
+  pointer-events: none; /* Сообщение не реагирует на клики */
 }
 
 .submit-form {
@@ -700,6 +771,7 @@ cursor: pointer;
   align-items: center;
   flex-shrink: 0;
   background: #BAE249;
+  transition: background 0.3s ease;
 
   color: #0B1919;
   font-family: "Open Sans";
@@ -708,6 +780,20 @@ cursor: pointer;
   font-weight: 700;
   line-height: normal;
 }
+
+.submit-form:hover{
+  background:  #91AC46;
+}
+
+.submit-form:active{
+  background:  #688B05;
+}
+
+.submit-form:focus {
+  outline: 1px solid #83A440;
+  outline-offset: 2px; /* Цвет рамки при фокусе */
+}
+
 
 
 /*= FOOTER BOTTOM ======================================================================================*/
@@ -720,8 +806,6 @@ cursor: pointer;
   background: #0B1919;
 }
 
-.footer_bottom-inner {}
-
 .footer-bottom-list {
   justify-content: center;
   height: 60px;
@@ -733,9 +817,6 @@ cursor: pointer;
 .footer-bottom-item {
   width: 24px;
   height: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-right: 15px;
   margin-left: 15px;
 }
@@ -744,13 +825,14 @@ cursor: pointer;
   margin-right: 0;
 }
 
-.footer-bottom-link {}
+.footer-bottom-link svg :hover{
+  fill: #BAE249;
+}
 
-.footer-copy {}
-
-.container {}
-
-.footer-copy-inner {}
+.footer-bottom-link:focus svg{
+  outline: 1px solid #83A440;
+  outline-offset: 2px; /* Цвет рамки при фокусе */
+}
 
 .footer-copyrite {
   display: flex;
